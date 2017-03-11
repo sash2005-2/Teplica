@@ -1,0 +1,55 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="теплица, теплицы из поликарбоната, купить теплицу, теплицы екатеринбург, теплицы урала, теплицы цена, лучшие теплицы, купить теплицу в екатеринбурге, теплицы из поликарбоната екатеринбург">
+    <meta name="description"
+          content="Современный интернет-магазин теплиц в Екатеринбурге по низким ценам, у нас вы можете купить качественные теплицы по низким ценам."/>
+
+    <title>Новая тепличка{% block title %}{% endblock %}</title>
+    <link href="{% static "css/main.css" %}" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'img/NT.png' %}" type="image/png">
+    {% block header %}
+    {% endblock %}
+</head>
+<body>
+<div id="head_content">
+    <div id="phone_number">
+        <img src="{% static "img/phone.png" %}" alt="текст"/>
+        +7-909-008-44-12
+    </div>
+
+    <div id="inkwell"><h1>Навая тепличка</h1>
+        <p>теплицы от производителя</p></div>
+
+    <div id="menu_content">
+        <ul>
+            <li><a href="{% url 'index_tpl' %}">Каталог</a></li>
+            <li><a href="{% url 'delivery_tpl' %}">Доставка</a></li>
+            <li><a href="{% url 'pay_tpl' %}">Оплата</a></li>
+            <li><a href="{% url 'contact_tpl' %}">Контакты</a></li>
+        </ul>
+    </div>
+
+
+</div>
+<div id="main_content">
+    <div id="left_content">
+        <ul>
+            <li><a href="{% url 'index_tpl' %}">Каталог</a></li>
+            <li><a href="{% url 'pay_tpl' %}">Оплата</a></li>
+            <li><a href="{% url 'delivery_tpl' %}">Доставка</a></li>
+            <li><a href="{% url 'contact_tpl' %}">Контакты</a></li>
+        </ul>
+    </div>
+    {% block cont %}
+
+    {% endblock %}
+
+</div>
+<footer>
+    <p class="copy_foot">&copy;2016 ООО"Новая тепличка". Все права защищены.</p>
+</footer>
+</body>
+</html>
